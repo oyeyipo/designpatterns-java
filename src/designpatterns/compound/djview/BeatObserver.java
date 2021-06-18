@@ -1,8 +1,7 @@
 package designpatterns.compound.djview;
 
-public class BeatObserver {
+public interface BeatObserver {
 
-    public void updateBeat() {
-    }
+    public void updateBeat();
 
 }

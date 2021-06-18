@@ -1,8 +1,7 @@
 package designpatterns.compound.djview;
 
-public class BPMObserver {
+public interface BPMObserver {
 
-    public void updateBPM() {
-    }
+    public void updateBPM();
 
 }
