@@ -101,6 +101,9 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver {
         bpmLabel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
         bpmOutputLabel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
+        controlFrame.getRootPane().setDefaultButton(setBPMButton);
+        controlFrame.getContentPane().add(controlPanel, BorderLayout.CENTER);
+
         controlFrame.pack();
         controlFrame.setVisible(true);
     }
@@ -127,7 +130,7 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver {
             int bpm = model.getBPM();
             if (bpm == 0) {
                 if (bpmOutputLabel != null) {
-                    bpmOutputLabel.setText("oofline");
+                    bpmOutputLabel.setText("offline");
                 }
             } else {
                 if (bpmOutputLabel != null) {
